@@ -9,6 +9,9 @@ def dvc_code():
 
     black = ['1검','2검','3검','4검','5검','6검','7검','8검','9검','A검','B검','C검']
     white = ['1흰','2흰','3흰','4흰','5흰','6흰','7흰','8흰','9흰','A흰','B흰','C흰']
+    
+    b_J = [조커]
+    w_J = [조커]
 
     random.shuffle(black)
     random.shuffle(white)
@@ -77,3 +80,6 @@ def p1_turn(p1,black,white):
 
 def p2_turn:
 #똑같이
+
+
+
