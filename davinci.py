@@ -12,7 +12,8 @@ def dvc_code():
     
     b_J = [조커]
     w_J = [조커]
-
+    
+    
     random.shuffle(black)
     random.shuffle(white)
 
@@ -40,7 +41,14 @@ def dvc_code():
 	print("	당신 차례입니다. 타일을 뽑으세요!")
 	p2, black, white = p2_turn(p2,black,white)
 	p2.sort()
-		
+
+
+def joker:
+    jo = random.randint(1,13)
+    if a = 1
+    #13분의 1 확률로 조커 가져오기
+    #진행중
+
 
 #섞은 카드 첫번째 인덱스 가져오기, 나머지 반환
 def get_card(tile):
