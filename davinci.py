@@ -45,10 +45,19 @@ def dvc_code():
 
 def joker:
     jo = random.randint(1,13)
-    if a = 1
+    
+    if jo  = 1:
+        b = random.randint(1,2)
+            if(b = 1):
+                # 검은색 조커 추가
+
+            else:
+                # 흰색 조커 추가
+
+        #조커 카드 추가 
+
     #13분의 1 확률로 조커 가져오기
     #진행중
-
 
 #섞은 카드 첫번째 인덱스 가져오기, 나머지 반환
 def get_card(tile):
