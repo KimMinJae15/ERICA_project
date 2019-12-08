@@ -36,12 +36,14 @@ def dvc_code():
 
     p1.sort()
     p2.sort()
-
+	p1_new = [] # 새로운
+	p2_new = []
+	p1_show = []
+	p2_show = [] # 보여줄 카드 리스트	
 	print("===================")
 	print("	당신 차례입니다. 타일을 뽑으세요!")
 	p2, black, white = p2_turn(p2,black,white)
 	p2.sort()
-
 
 def joker:
     jo = random.randint(1,13)
@@ -94,9 +96,24 @@ def p1_turn(p1,black,white):
 
 
 
+#컴퓨터가 맞추기
+def p1_check:
+	black_copy = ['1검','2검','3검','4검','5검','6검','7검','8검','9검','A검','B검','C검']
 
-def p2_turn:
-#똑같이
+ 	white_copy = ['1흰','2흰','3흰','4흰','5흰','6흰','7흰','8흰','9흰','A흰','B흰','C흰']
+	#p1 길이 랜덤으로 받고 random(1,p1길이) 한 다음에 만약 그 카드가 검은색이면 black이랑 p			1카드중 하나 뽑고
+	#그 카드가 흰색이면 white랑 p2카드중에서 하나 뽑고 
+	c = 0
+	for i in range(len(p2)-1):
+		a = random.randint(1, len(p2))
+		if "검" in p2[a-1]:
+			b = black_copy[random.randint(0,len(black_copy)-1]
+			if(p2[a-1] == b):
+				#보여주기?
 
 
 
+def show_p1:
+
+
+def p2_turn
