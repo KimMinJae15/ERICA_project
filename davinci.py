@@ -116,4 +116,17 @@ def p1_check:
 def show_p1:
 
 
-def p2_turn
+def p2_turn:
+
+
+
+def more_game(): 
+    a = input("새 게임을 진행 하시겠습니까? y/n: ")
+    while not (a == 'y' or a == 'n'):
+        a = input("새 게임을 진행하시겠습니까? y/n")
+    if a == 'y':
+        dvc_code()
+
+    else:
+        print("GoodBye!")
+
