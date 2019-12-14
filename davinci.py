@@ -161,6 +161,12 @@ def p2_turn(p2,black,white,p2_new):
             p2_new.append(card)
     return (p2,black,white,p2_new)
 
+def show_p2(p2):
+    print("내 타일:", end = '')
+    for i in p2:
+        print(i+' ', end = '')
+    
+
 def more_game(): 
     a = input("새 게임을 진행 하시겠습니까? y/n: ")
     while not (a == 'y' or a == 'n'):
