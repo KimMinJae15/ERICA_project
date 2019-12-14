@@ -140,6 +140,20 @@ def p2_turn(p2,black,white,p2_new):
 		pew_new.append(card)
 
 	else:
+
+            color = input("어떤 색의 타일을 가져오시겠습니까? b/w: ")
+
+            while not (color == 'b' or color == 'w'):
+                print("타일의 색을 b 혹은 w로 입력해주세요. ")
+                color = input("어떤 색의 타일을 가젼오시겠습니까? b/w: ")
+
+            if color == "b":
+                color, black = black[0], black[1:]
+                p2.append(card)
+                #가져온 카드 새로운 리스트에 넣기
+                p2_new.append(card)
+
+            else:
 		# 둘다 잔여 카드가 남았을때
 
             card, white = white[0], white[1:]
