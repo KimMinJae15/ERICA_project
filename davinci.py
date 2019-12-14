@@ -72,34 +72,34 @@ def p1_turn(p1,black,white):
     if a = 1:
     	if black = []:
 	    
-			if white = []:
-	    		pass
-			else:
-				card, white = white[0], white[1:]
-				p1.append(card)
-				p1_new.append(card)
+	    if white = []:
+	        pass
+	    else:
+		card, white = white[0], white[1:]
+		p1.append(card)
+		p1_new.append(card)
 
-		else:
-			card, black = black[0], black[1:]
-			p1.append(card)
-			p1_new.append(card)
+	else:
+	    card, black = black[0], black[1:]
+	    p1.append(card)
+	    p1_new.append(card)
 
-   else:
-		if white = []:
-			if black = []:
-				pass
+    else:
+	if white = []:
+	    if black = []:
+		pass
 
-			else:
-				card, black = black[0], black[1:]
-				p1.append(card)
-    			p1_new.append(card)
+	    else:
+		card, black = black[0], black[1:]
+		p1.append(card)
+    		p1_new.append(card)
 
-		else:
-			card, white = white[0], white[1:]
-			p1.append(card)
-			p1_new.append(card) # p1이 뽑은 카드들을 모두 새 리스트에
+	else:
+	    card, white = white[0], white[1:]
+	    p1.append(card)
+	    p1_new.append(card) # p1이 뽑은 카드들을 모두 새 리스트에
 
-	return (p1,black,white)
+    return (p1,black,white)
 
 
 
@@ -141,6 +141,11 @@ def p2_turn(p2,black,white,p2_new):
 
 	else:
 		# 둘다 잔여 카드가 남았을때
+
+            card, white = white[0], white[1:]
+            p2.append(card)
+            p2_new.append(card)
+    return (p2,black,white,p2_new)
 
 def more_game(): 
     a = input("새 게임을 진행 하시겠습니까? y/n: ")
