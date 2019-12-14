@@ -176,4 +176,7 @@ def more_game():
 
     else:
         print("GoodBye!")
+        time.sleep(2)
+
+        
 
