@@ -69,7 +69,9 @@ def dvc_code():
 
 			print("==================")
 			print("	computer가 타일 뽑는 중 ")
-			print('...', end = ' ')
+			time.sleep(1)
+                        print('...', end = ' ')
+                        time.sleep(1)
                         print()
                         p1, black, white, p1_new = p1_turn(p1,black,white,p1_new) #p1이 카드 뽑기(검정, 흰색 중 랜덤)
                         p1.sort()
@@ -80,7 +82,9 @@ def dvc_code():
                         #
 
                         print(" computer가 당신의 타일을 맞추는 중")
+                        time.sleep(1)
                         print('...', end = ' ')
+                        time.sleep(1)
                         print()
                         p1_show, p2_show = p1_check(p2,p2_show,p1_show,p1_new)
 
