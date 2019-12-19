@@ -1,4 +1,4 @@
-# OSS project 2019057956 "KimMinJae"
+# OSS project 2019057956` "KimMinJae"
 # Davinci code
 ##################################
 import random
@@ -70,8 +70,30 @@ def dvc_code():
 			print("==================")
 			print("	computer가 타일 뽑는 중 ")
 			print('...', end = ' ')
+                        print()
+                        p1, black, white, p1_new = p1_turn(p1,black,white,p1_new) #p1이 카드 뽑기(검정, 흰색 중 랜덤)
+                        p1.sort()
 
+                        show_p2(p2)
+                        show_p1(p1,p1_show)
+                        print("공개된 내 타일 : ", end = '')
+                        #
 
+                        print(" computer가 당신의 타일을 맞추는 중")
+                        print('...', end = ' ')
+                        print()
+                        p1_show, p2_show = p1_check(p2,p2_show,p1_show,p1_new)
+
+                        show_p2(p2)
+                        show_p1(p1,p1_show)
+                        p2_show.sort()
+                        print("공개된 내 타일 : ", end = '')
+                        #
+
+                        print()
+                        
+                        if len(p2) == len(p2_show): raise ComputerWin #Computer가 이긴 경우 예외처리 
+                        
 
 			except PlayerWin:
                             print("")
