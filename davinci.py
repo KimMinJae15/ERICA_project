@@ -40,11 +40,46 @@ def dvc_code():
 	p2_new = []
 	p1_show = []
 	p2_show = [] # 보여줄 카드 리스트	
-	print("===================")
-	print("	당신 차례입니다. 타일을 뽑으세요!")
-	p2, black, white = p2_turn(p2,black,white)
-	p2.sort()
+	
+	show_p1(p1,p1_show)
+	show_p2(p2)
 
+	while True:
+		try:
+			print("===================")
+			print("	당신 차례입니다. 타일을 뽑으세요!")
+			p2, black, white,p2_new = p2_turn(p2,black,white,p2_new)
+			p2.sort()
+			
+			print()
+			show_p2(p2)
+			show_p1(p1,p1_show)
+			#공개된 내 타일
+			
+			p1_show, p2_show = p2_check(p1,p2_new,p1_show,p2_show)
+
+			show_p2(p2)
+			show_p1(p1,p1_show)
+			p2_show.sort()
+			#공개된 내 타일
+			
+			if len(p1) == len(p1_show): raise PlayerWin # player가 이긴 경우 예외 처리 	
+
+			####p1 턴
+
+			print("==================")
+			print("	computer가 타일 뽑는 중 ")
+			print('...', end = ' ')
+
+
+
+			except PlayerWin:
+
+
+
+			except ComputerWin:
+
+			
 def joker:
     jo = random.randint(1,13)
     
