@@ -74,10 +74,15 @@ def dvc_code():
 
 
 			except PlayerWin:
-
-
-
+                            print("")
+                            print(" 이겼습니다! 축하드립니다!")
+                            more_game
+                            break
 			except ComputerWin:
+                            print("")
+                            print(" 아쉽게도 졌네요 ㅠㅠㅠ")
+                            more_game()
+                            break
 
 			
 def joker:
