@@ -54,6 +54,10 @@ def dvc_code():
 			print()
 			show_p2(p2)
 			show_p1(p1,p1_show)
+			print("공개된 내 타일 : ", end = '')
+			for i in p2_show:
+			print(i+' ', end = '')
+			print('\n')
 			#공개된 내 타일
 			
 			p1_show, p2_show = p2_check(p1,p2_new,p1_show,p2_show)
@@ -61,6 +65,10 @@ def dvc_code():
 			show_p2(p2)
 			show_p1(p1,p1_show)
 			p2_show.sort()
+			print("공개된 내 타일 : ", end = '')
+			for i in p2_show:
+				print(i + ' ', end = '')
+			print()
 			#공개된 내 타일
 			
 			if len(p1) == len(p1_show): raise PlayerWin # player가 이긴 경우 예외 처리 	
@@ -80,6 +88,9 @@ def dvc_code():
                         show_p1(p1,p1_show)
                         print("공개된 내 타일 : ", end = '')
                         #
+						for i in p2_show:
+							print(i+' ', end = '')
+						print('\n')
 
                         print(" computer가 당신의 타일을 맞추는 중")
                         time.sleep(1)
@@ -92,7 +103,8 @@ def dvc_code():
                         show_p1(p1,p1_show)
                         p2_show.sort()
                         print("공개된 내 타일 : ", end = '')
-                        #
+                        for i in p2_show:
+							print(i + ' ', end = '')
 
                         print()
                         
@@ -111,15 +123,15 @@ def dvc_code():
                             break
 
 			
-def joker:
-    jo = random.randint(1,13)
+#def joker:
+#   jo = random.randint(1,13)
     
-    if jo  = 1:
-        b = random.randint(1,2)
-            if(b = 1):
+#   if jo  = 1:
+#       b = random.randint(1,2)
+#           if(b = 1):
                 # 검은색 조커 추가
 
-            else:
+#           else:
                 # 흰색 조커 추가
 
         #조커 카드 추가 
