@@ -194,9 +194,32 @@ def p1_check:
 		if "검" in p2[a-1]:
 			b = black_copy[random.randint(0,len(black_copy)-1]
 			if(p2[a-1] == b):
-				#보여주기?
+			    print("")
+                            print()
+                            p2_show.append(b)
+                            c+=1
+                            break
+                        else:
+                            continue
+                elif "흰" in p2[a-1]:
+                    b = white_copy[random.randint(0, len(white_copy)-1)
+                    if (p2[a-1] == b):
+                        print("컴퓨터가 당신의 타일을 맞췄습니다!")
+                        print()
+                        p2_show.append(b)
+                        c+=1
+                        break
+                    else:
+                        continue
+
+                        #보여주기?
 
 
+    if c == 0:
+        print("컴퓨터가 당신의 타일을 맞추지 못했습니다.")
+        print()
+        p1_show.append(p1_new[len(p1_new)-1])
+    return (p1_show,p2_show)
 
 def show_p1:
 
