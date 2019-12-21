@@ -300,9 +300,12 @@ def p2_check(p1,p1_new,p1_show,p2_show):
 				print("틀렸습니다.")
 				print("Computer에게",p2_new[-1],"이(가)공개됩니다.")
 				print()
-				break
+				p2_show.append(p2_new[-1])
+                                break
 
-
+                    except ValueError:
+                        print("범위 내의 숫자를 알맞게 입력해 주세요.")
+                        continue
 def show_p2(p2):
     print("내 타일:", end = '')
     for i in p2:
