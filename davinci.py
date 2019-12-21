@@ -221,8 +221,31 @@ def p1_check:
         p1_show.append(p1_new[len(p1_new)-1])
     return (p1_show,p2_show)
 
-def show_p1:
+def show_p1(p1,p1_show):
+    cnt = 0
+    i = 0
+    p1_copy = p1[:]
 
+    while (i != len(p1)):
+        p1_copy[i] == '□ '
+        i += 1
+    for s in range(len(p1))
+        if '검' in p1[s]:
+            p1_copy[s] = '■'
+    
+    for i in p1:
+        for j in p1_show:
+            if (i == j):
+                p1_copy[cnt] == j
+        cnt += 1
+
+    print("상대의 타일 : ",end = '')
+    for j in p1_copy:
+        print(j+ '  ',end = '')
+    print()
+
+        
+    
 
 def p2_turn(p2,black,white,p2_new):
 	if black = []:
