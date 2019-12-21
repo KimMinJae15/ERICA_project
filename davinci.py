@@ -262,6 +262,47 @@ def p2_turn(p2,black,white,p2_new):
             p2_new.append(card)
     return (p2,black,white,p2_new)
 
+def p2_check(p1,p1_new,p1_show,p2_show):
+	while True:
+		try:
+			pos1 = int(input("위치: "))
+			while not (pos1 <= len(p1) and pos1>=1):
+				print("타일의 위치 번호를 제대로 입력해 주세요.")
+				pos1 = int(input("위치:"))
+			if '검' in p1[pos1-1]:
+				card1_color = '검'
+			else:
+				card1_color = '흰'
+
+			card1_num = input("예상되는 타일의 알파벳:")
+			while not (card1_num == 'A' or card1_num == 'B' or card_num == 'C' or card_num == 'D' or card)num == 'E' or card_num == 'F' or card_num == 'G' or card_num == 'H' or card_num == 'I' or card_num 'J' or card_num == 'K' or card_num == 'L'
+
+				print("알파벳을 제대로 입력해 주세요.")
+				card1_num = input("예상되는 타일의 알파벳 : ")
+			
+			card1 = card1_num + card1_color
+			if (p1[pos1-1] == card1):
+				print("맞췄습니다!")
+				# 상대 카드 까기
+				# 깐 카드 리스트에 넣기 -> show_p1에 넣기 
+
+				p1_show.append(card1)
+				show_p1(p1,p1_show)
+				trial = input("한번 더 맞추시겠습니까? y/n : ")
+				while not (trial == 'y' or trial == 'n'):
+					trial = input("한번 더 맞추시겠습니까? y/n : ")
+				if (trial == "y"):
+					continue
+				else:
+					print("턴을 넘기겠습니다.")
+					break
+			else:
+				print("틀렸습니다.")
+				print("Computer에게",p2_new[-1],"이(가)공개됩니다.")
+				print()
+				break
+
+
 def show_p2(p2):
     print("내 타일:", end = '')
     for i in p2:
@@ -281,4 +322,4 @@ def more_game():
         time.sleep(2)
 
         
-
+dvc_code()
