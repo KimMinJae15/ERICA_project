@@ -1,6 +1,7 @@
 # OSS project 2019057956` "KimMinJae"
 # Davinci code
 ##################################
+
 import random
 
 import time
@@ -9,20 +10,37 @@ class ComputerWin(Exception): pass
 
 class PlayerWin(Exception): pass
 
-
+def manual():
+	print("다빈치 코드에 오신걸 환영합니다.")
+	print()
+	print("다빈치 코드는 내가 가지고 있는 타일과 상대의 공개된 타일을 보고")
+	print("상대방의 공개되지 않은 타일을 유추하는 보드게임입니다. ")
+	print()
+	print("타일은 왼쪽부터 오름차순으로 정렬되어 있습니다.")
+	print()
+	print("검정색 타일과 흰색 타일이 존재하며 같은 숫자를 가질수 있습니다.")
+	print()
+	print("예를 들어 검정색타일1과 흰색 타일1을 가지고 있다면, 검정색 타일이 왼쪽에 오게 됩니다. ")
+	print()
+	print("상대방의 타일을 맞추면 한번 더 맞출수 있는 기회가 주어집니다.")
+	print("그럼 행운을 빕니다. Good Luck!")
+	print()
+	enter = print("Press Enter to start")
+	dvc_code()
 
 def dvc_code():
-
+	
     print("===========================")
 
     print("Welcome to 'Da Vinci Code'.")
 
     print("===========================")
-
-    a = input("Press Enter to start")
-
+    choose = input("다빈치 코드의 룰을 아십니까? 규칙을 보려면 1번을, 시작하려면 엔터를 눌러주세요.")
+    if choose == '1':
+        manual()
+    
+    print("게임이 시작되었습니다!")
     print()
-
     black = ['1검', '2검', '3검', '4검', '5검', '6검', '7검', '8검', '9검', 'A검', 'B검', 'C검']
 
     white = ['1흰', '2흰', '3흰', '4흰', '5흰', '6흰', '7흰', '8흰', '9흰', 'A흰', 'B흰', 'C흰']
